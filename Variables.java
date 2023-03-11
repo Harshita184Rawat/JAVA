@@ -1,4 +1,4 @@
-public class Variables {
+ublic class Variables {
     public static void main(String srgs[]) {
         // string
         String name = "Tony stark";
