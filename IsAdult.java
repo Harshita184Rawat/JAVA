@@ -1,5 +1,7 @@
 import java.util.*;
 
+import javax.sql.rowset.spi.SyncResolver;
+
 class IsAdult {
     public static void main(String[] arsg) {
         Scanner sc = new Scanner(System.in);
@@ -11,5 +13,4 @@ class IsAdult {
         }
 
     }
-
 }
