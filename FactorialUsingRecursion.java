@@ -14,6 +14,7 @@ public class FactorialUsingRecursion {
         Scanner sc = new Scanner(System.in);
         number = sc.nextInt();
         int n = number;
-        fact(number);
+        int result=fact(number);
+        System.out.println("Factorial is "+ result);
     }
 }
