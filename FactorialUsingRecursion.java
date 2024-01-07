@@ -9,12 +9,12 @@ public class FactorialUsingRecursion {
         return factorial_n;
     }
 
-    public static void main() {
+    public static void main(String args[]) {
         int number;
+        System.out.print("Enter Number: ");
         Scanner sc = new Scanner(System.in);
         number = sc.nextInt();
-        int n = number;
-        int result=fact(number);
-        System.out.println("Factorial is "+ result);
+        int result = fact(number);
+        System.out.println("Factorial is " + result);
     }
 }
