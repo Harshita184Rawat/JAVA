@@ -1,8 +1,11 @@
-
-
-
 public class LL {
+    private int size;
+    // constructor to initlaize size variable
+    LL(){
+        this.size = 0;
+    }
     Node head;
+
     // declaring node
     class Node{
         String data;
@@ -12,6 +15,8 @@ public class LL {
         Node(String data){
             this.data=data;
             this.next = null;
+            // whenever new node is created
+            size++;
         }
     }
 
@@ -67,6 +72,46 @@ public class LL {
 
         }
 
+        // delete first
+        public void deleteFirst(){
+            if(head == null){
+                System.out.println("lisrt is empty");
+            }
+
+            head = head.next;
+            size--;
+        }
+
+        // delete last
+        public void deleteLast(){
+            // empty linked list
+             if(head == null){
+                System.out.println("lisrt is empty");
+            }
+            
+            size--;
+            // only single element in linked list
+            if(head.next == null){
+                head = null;
+            }
+
+            // to get seconda last node and make it's next  = null
+            Node secondLast = head;
+            Node lastNode =  head.next;;
+            while(lastNode.next != null){
+                lastNode = lastNode.next;
+                secondLast = secondLast.next;
+            }
+
+            secondLast.next=null;
+
+             
+        }
+
+
+        public int getSize(){
+            return size;
+        }
         public static void main(String[] args) {
             // object of the the class itself
             LL list = new LL();
@@ -79,6 +124,14 @@ public class LL {
 
             list.addFirst("this");
             list.printList();
+
+            list.deleteFirst();
+            list.printList();
+
+            list.deleteLast();
+            list.printList();
+
+            System.out.println("Size = " + list.getSize());
 
     }
     
