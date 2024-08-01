@@ -1,3 +1,7 @@
+// binary tree implementation and traversal techniques
+
+import java.util.*;
+
 public class BinaryTreeYT {
     static class Node{
         int data;
@@ -67,6 +71,40 @@ public class BinaryTreeYT {
 
 
     }
+
+    // level order traversal
+    public static void levelOrder(Node root){
+        Queue<Node> q  = new LinkedList<>();
+        q.add(root);
+        q.add(null);
+
+        while(!q.isEmpty()){
+            Node currNode = q.remove();
+            if(currNode == null){
+                System.out.println();
+                if(q.isEmpty()){
+                    break;
+                }
+                else{
+                    q.add(null);
+                }
+            }
+            else{
+                System.out.print(currNode.data + " ");
+                if(currNode.left != null){
+                    q.add(currNode.left);
+                }
+
+                if(currNode.right != null){
+                    q.add(currNode.right);
+                }
+            }
+        }
+
+
+    }
+
+
     public static void main(String[] args) {
 
         // preorder 
@@ -81,6 +119,10 @@ public class BinaryTreeYT {
         inorder(root);
         System.out.println();
         postorder(root);
+        System.out.println();
+        System.out.println();
+       levelOrder(root);
+        
     }
 
     
