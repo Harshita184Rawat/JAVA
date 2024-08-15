@@ -1,5 +1,6 @@
 // given an input string and a dictionaryof words , find out if the input string can be broken into space separated sequence of dictionary words.
 
+
 public class WordBreakProblem {
 
     static class Node {
@@ -9,10 +10,6 @@ public class WordBreakProblem {
         // constructor
         public Node() {
             children = new Node[26]; // array size [a-z]
-            // initilaise each ith node in children array to null: if doesn't work use
-            // for(int i=0;i<26;i++){
-            //     children[i] =null;
-            // }
             endOfWord = false;
         }
     }
