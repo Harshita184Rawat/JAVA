@@ -7,6 +7,10 @@ public class TrieFromWordArray {
         // constructor
         public Node() {
             children = new Node[26]; // array size [a-z]
+            // initilaise each ith node in children array to null: if doesn't work use
+            // for(int i=0;i<26;i++){
+            //     children[i] =null;
+            // }
             endOfWord = false;
         }
     }
