@@ -12,7 +12,7 @@ public class StringBuilder {
         System.out.print(sb.SetCharAt(0, 'o');
 
         // to insert char at specific index
-
+        sb.insert(index, str, start, end)
     
        // to delete a char/substring
        sb.delete(0,5);
